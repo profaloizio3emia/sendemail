@@ -1,0 +1,28 @@
+var server = require('./config/server')
+var email = require('./config/email')
+
+var app = server.app
+
+var porta = server.porta
+
+app.get('/',(req,res)=>{
+    res.send("Servidor rodando")
+})
+
+app.get('/send',(req,res)=>{
+    email.sendMail({
+        from:'profaloizio.filho@hotmail.com',
+        to:'aloizio.gomes@gmail.com',
+        replyTo:'profaloizio.filho@hotmail.com',
+        subject:'Teste de envio de email',
+        html:'<p>Teste de envio de email para sistema de recuperação de senha</p>'
+    })
+    .then((result)=>{
+        res.send(result)
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
+})
+
+app.listen(porta)
