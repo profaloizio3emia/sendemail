@@ -1,6 +1,6 @@
 avar nodemailer = require('nodemailer')
 
-var email = "profaloizio.3emmia@gmail.com"
+var email = "profaloizio.3emia@gmail.com"
 var senha = "prof1234$"
 
 var transporter = nodemailer.createTransport({
