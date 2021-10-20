@@ -1,10 +1,10 @@
-var nodemailer = require('nodemailer')
+avar nodemailer = require('nodemailer')
 
-var email = "profaloizio.filho@hotmail.com"
-var senha = "Teste1234$"
+var email = "profaloizio.3emmia@gmail.com"
+var senha = "prof1234$"
 
 var transporter = nodemailer.createTransport({
-    host:'smtp.office365.com',
+    host:'smtp.gmail.com',
     port:'587',
     auth:{user:email,pass:senha}
 })
