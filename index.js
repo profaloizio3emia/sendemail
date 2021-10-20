@@ -13,7 +13,7 @@ app.post('/',(req,res)=>{
     console.log(req.body)
 
     email.sendMail({
-        from:'profaloizio.filho@hotmail.com',
+        from:'profaloizio.3emia@gmail.com',
         to:req.body.email,
         replyTo:'profaloizio.filho@hotmail.com',
         subject:'Teste de envio de email',
