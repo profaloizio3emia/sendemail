@@ -10,10 +10,11 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/',(req,res)=>{
+    console.log(req.body)
 
     email.sendMail({
         from:'profaloizio.filho@hotmail.com',
-        to:req.body,email,
+        to:req.body.email,
         replyTo:'profaloizio.filho@hotmail.com',
         subject:'Teste de envio de email',
         html:'<p>Teste de envio de email para sistema de recuperação de senha</p>'
